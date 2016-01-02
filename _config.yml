@@ -19,6 +19,13 @@ github_username:  vrgadam
 # Build settings
 markdown: kramdown
 
+destination: ./dist
+
+includes_dir: ./src/includes
+
+data_dir:     ./config
+
 sass:
-  sass_dir: _src/scss
-  style: compressed
+  sass_dir: ./src/styles
+
+exclude: ['src', 'config', 'node_modules', 'package.json', 'Gruntfile.js', 'README.md']
