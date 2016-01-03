@@ -7,7 +7,7 @@ module.exports = function(grunt) {
                 browsers: ['last 2 versions', 'ie 8', 'ie 9']
             },
             css: {
-                src: './dist/assets/css/varazskez.css'
+                src: './dist/assets/varazskez.css'
             },
         },
         watch: {
@@ -22,11 +22,11 @@ module.exports = function(grunt) {
                     './config/**/*.json',
                     './config/**/*.yml'
                 ],
-                tasks: ['build']
+                tasks: ['build-jekyll']
             },
             js: {
                 files: ['./src/scripts/**/*.js'],
-                tasks: ['browserify']
+                tasks: ['build-js']
             }
         },
         connect: {
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
         browserify: {
             build: {
                 src: ['./src/scripts/main.js'],
-                dest: './dist/assets/js/varazskez.js'
+                dest: './dist/assets/varazskez.js'
             }
         },
         jekyll: {
@@ -58,13 +58,18 @@ module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt);
 
-    grunt.registerTask('build', function() {
-        var tasks = ['jekyll:dev', 'autoprefixer:css', 'browserify'];
+    grunt.registerTask('build-jekyll', function() {
+        var tasks = ['jekyll:dev', 'autoprefixer:css'];
+        grunt.task.run(tasks);
+    });
+
+    grunt.registerTask('build-js', function() {
+        var tasks = ['browserify'];
         grunt.task.run(tasks);
     });
 
     grunt.registerTask('serve', function() {
-        grunt.task.run(['build', 'connect', 'watch']);
+        grunt.task.run(['build-jekyll', 'build-js', 'connect', 'watch']);
     });
 
 };
