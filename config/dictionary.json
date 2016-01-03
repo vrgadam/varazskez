@@ -1,0 +1,11 @@
+{
+	"header": {
+		"nav": {
+			"home": "Heti akció",
+			"services": "Szolgáltatások",
+			"prices": "Árak",
+			"about": "Rólunk",
+			"contact": "Kapcsolat"
+		}
+	}
+}

@@ -1,11 +1,19 @@
-div.macska {
-	font-family: 'Oswald', sans-serif;
-	text-transform: uppercase;
-	color: pink;
+#home {
+    background-color: blue;
+    height: 300px;
 }
-div.macskafooter {
-	background-color: pink;
-	color: green;
-	font-family: 'Oswald', sans-serif;
-	text-transform: uppercase;
+
+#services {
+    background-color: purple;
+    height: 300px;
+}
+
+#about {
+    background-color: red;
+    height: 300px;
+}
+
+#contact {
+    background-color: orange;
+    height: 300px;
 }
