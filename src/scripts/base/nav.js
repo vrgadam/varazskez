@@ -5,7 +5,7 @@ var ResponsiveNav = require('responsive-nav');
 
 var $menuItems;
 var sectionPositions = {};
-var PRICES_URL = '#prices';
+var PRICES_URL = './prices.html';
 
 // Initializes the navigation on a given element
 function init(classSelector) {
@@ -33,13 +33,13 @@ function init(classSelector) {
 }
 
 // Updates the sectionPositions object. 
-// Each section gets an attribute with the top position of the element.
+// Each section gets an attribute with the offset top position of the element.
 function updatePositions() {
     $menuItems.each(function() {
         var sectionSelector = $(this).attr('href');
         if (sectionSelector !== PRICES_URL) {
             sectionPositions[sectionSelector.substring(1)] =
-                $(sectionSelector).offset().top - 40;
+                $(sectionSelector).offset().top;
         }
     });
 }
@@ -48,7 +48,7 @@ function updatePositions() {
 function scrollToPosition(section) {
     var body = $('html, body');
     body.stop().animate({
-        scrollTop: sectionPositions[section]
+        scrollTop: sectionPositions[section] - 40
     }, '200', 'swing');
 }
 
