@@ -7,12 +7,16 @@ var $menuItems;
 var sectionPositions = {};
 var PRICES_URL = '#prices';
 
+// Initializes the navigation on a given element
 function init(classSelector) {
     var nav = ResponsiveNav(classSelector, {
         closeOnNavClick: true
     });
 
     $menuItems = $($(classSelector).first().find('ul li a'));
+
+    // Initialize section positions
+    updatePositions();
 
     // Set up event handlers
     $menuItems.each(function() {
@@ -26,10 +30,10 @@ function init(classSelector) {
     });
 
     $(window).resize(updatePositions);
-
-    updatePositions();
 }
 
+// Updates the sectionPositions object. 
+// Each section gets an attribute with the top position of the element.
 function updatePositions() {
     $menuItems.each(function() {
         var sectionSelector = $(this).attr('href');
@@ -40,6 +44,7 @@ function updatePositions() {
     });
 }
 
+// Scrolls to the passed section's stored position 
 function scrollToPosition(section) {
     var body = $('html, body');
     body.stop().animate({
