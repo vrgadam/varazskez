@@ -1,10 +1,10 @@
 (function() {
     var $ = require('jquery');
 
-    var Navigation = require('./nav/nav.js');
+    var Navigation = require('./base/nav.js');
 
     $(document).ready(function() {
-        Navigation.init();
+        Navigation.init('.site-nav');
     });
 
 })();
