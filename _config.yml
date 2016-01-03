@@ -30,6 +30,6 @@ data_dir:     ./config
 sass:
   sass_dir: ./src/styles
 
-exclude: ['./src', './config', './node_modules', './package.json', './Gruntfile.js', './README.md']
+exclude: ['src', 'config', 'node_modules', 'package.json', 'Gruntfile.js', 'README.md']
 
-keep_files: ['./dist/assets/js']
+keep_files: ['dist/assets/varazskez.js']
