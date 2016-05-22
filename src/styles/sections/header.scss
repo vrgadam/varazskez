@@ -9,6 +9,7 @@
     height: ($logo-size-large / 3) + ($height-menu-item * 1.5);
     transform: translateY(0px);
     background-color: rgba(0, 0, 0, 0.05);
+    z-index: 10;
     @include header-gradient-1;
     .logo-container {
         transform: translateY(-$logo-size-large/2);
