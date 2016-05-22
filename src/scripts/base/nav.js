@@ -56,8 +56,7 @@ function onScroll() {
   if ($header.hasClass('docked') && scroll === 0) {
     $header.removeClass('docked');
   }
-
-  if ($('.row').hasClass('hidden') && scroll >= $('#home').height()) {
+  if ($('.row').hasClass('hidden') && scroll >= $('#home').outerHeight() / 2) { 
     $('.row').removeClass('hidden');
   }
   updateActiveSection(scroll);
