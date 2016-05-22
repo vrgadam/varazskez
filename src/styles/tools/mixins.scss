@@ -20,9 +20,9 @@
 @mixin header-gradient-1() {
     background: rgba($color-smoky-purple, 50%);
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, rgba($color-smoky-purple, $opacity-background-header), rgba(white, $opacity-background-header));
+    background: -webkit-linear-gradient(to left, rgba($color-smoky-purple, $opacity-background-header), rgba(#DEDEDE, $opacity-background-header));
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, rgba($color-smoky-purple, $opacity-background-header), rgba(white, $opacity-background-header));
+    background: linear-gradient(to left, rgba($color-smoky-purple, $opacity-background-header), rgba(#DEDEDE, $opacity-background-header));
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
