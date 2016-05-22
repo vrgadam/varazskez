@@ -1,14 +1,99 @@
 section#home {
-	height: calc(100% - 40px);
-	background-image: url("./img/header.jpg");
+    height: calc(100% - 25px);
+    min-height: 630px;
+    background-image: url("./img/header.jpg");
     background-size: cover;
     background-position: center center;
-    padding-top: ($logo-size-large / 2) + ($height-menu-item * 1.5) + 200px;
+    padding-top: $height-header;
     position: relative;
-    .jansen-logo {
-    	margin: 40px;
-    	bottom: 0;
-    	right: 0;
-    	background-image: url("./img/janssen.png");	
+    .section-inner {
+        padding: 50px 20px;
+        display: table;
+        width: 100%;
+    }
+    .home-content {
+    	display: table-cell;
+    	vertical-align: middle;
+    }
+    .row,
+    .col {
+        margin: 0 !important;
+    }
+    .brand {
+        text-align: center;
+        background: url("./img/logo.png") no-repeat center center;
+        background-size: 150px;
+        background-position-y: 16px;
+        padding: 48px 0 30px;
+        opacity: 0;
+        animation: enter-home-elements .8s ease-out forwards;
+        animation-delay: .8s;
+        min-width: 500px;
+        h1,
+        h2,
+        h3 {
+            @include txt-heading($color-light);
+        }
+        h1 {
+            font-size: 600%;
+            font-weight: 500;
+            text-shadow: 0px 0px 5px rgba(255, 255, 255, 1), 0px 0px 1px rgba(0, 0, 0, .9);
+            margin: 0;
+        }
+        h2 {
+            font-size: 200%;
+            letter-spacing: 15px;
+            text-indent: 15px;
+            margin-top: 10px;
+            color: $color-smoky-purple;
+        }
+        h2,
+        h3 {}
+        h3 {
+            margin: 4px 0 0;
+            color: #65615B;
+        }
+    }
+    .cta {
+        padding: 0;
+        text-align: center;
+        opacity: 0;
+        animation: enter-home-elements .8s ease-out forwards;
+        animation-delay: .9s;
+        min-width: 500px;
+        a {
+            background: #4275F4;
+
+            background: #4C6AE4;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 20px 30px;
+            border-radius: 5px;
+            box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            font-size: 120%;
+            margin: 0 auto 50px;
+            display: inline-block;
+            text-decoration: none;
+            &:hover {
+                box-shadow: 0px 22px 14px -14px rgba(0, 0, 0, 0.3);
+                // transform: scale(1.01);
+            }
+        }
+    }
+    .janssen-logo {
+        margin: 40px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 200px;
+        height: 75px;
+        background: url("./img/janssen-logo.png") no-repeat center;
+        background-size: 100%;
+        transition: opacity .6s ease;
+        &:hover {
+            opacity: .75;
+        }
     }
 }

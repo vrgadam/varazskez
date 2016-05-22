@@ -28,3 +28,16 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
+
+@keyframes enter-home-elements {
+  from {
+    transform:  translateY(70px);
+    opacity: 0;
+  }
+
+  to {
+    transform:  translateY(0);
+    opacity: 1;
+  }
+}

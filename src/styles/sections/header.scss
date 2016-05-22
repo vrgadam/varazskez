@@ -6,7 +6,7 @@
     width: 100%;
     background-color: transparent;
     transition: transform .2s ease;
-    height: ($logo-size-large / 3) + ($height-menu-item * 1.5);
+    height: $height-header;
     transform: translateY(0px);
     background-color: rgba(0, 0, 0, 0.05);
     z-index: 10;
@@ -49,8 +49,9 @@
                 transition: all .2s ease;
                 width: 20%;
                 a {
-                    @include txt-heading($color-text);
+                    @include txt-heading($color-light);
                     text-decoration: none;
+                    font-size: 100%;
                     margin: 0 15px;
                     cursor: pointer;
                     height: $height-menu-item;
@@ -60,7 +61,6 @@
                     position: relative;
                     cursor: pointer;
                     z-index: 2;
-                    color: $color-light;
                     text-shadow: 0 0 1px rgba(#333, .5);
                     &.active {
                         cursor: default;

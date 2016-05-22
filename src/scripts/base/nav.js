@@ -26,6 +26,10 @@ function init(classSelector) {
     });
   });
 
+  $('#home .cta a').click(function(e) {
+    e.preventDefault();
+    scrollToPosition($(e.delegateTarget).attr('href').substring(1));
+  });
   $(window).resize(updatePositions);
 
   $(document).scroll(onScroll);
@@ -58,7 +62,7 @@ function onScroll() {
 // Scrolls to the passed section's stored position 
 function scrollToPosition(section) {
   var body = $('html, body');
-  var position = section === 'home' ? 0 : sectionPositions[section] - (ACTIVATION_DISTANCE * 0.6);
+  var position = section === 'home' ? 0 : sectionPositions[section] - 50;
   body.stop().animate({
     scrollTop: position
   }, '200', 'swing');
