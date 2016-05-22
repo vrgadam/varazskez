@@ -1,0 +1,21 @@
+html,
+body {
+    background-color: $color-light;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+section {
+    border-bottom: 1px solid #ccc;
+    padding: 150px 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+span,
+div,
+section,
+p {
+    box-sizing: border-box;
+}

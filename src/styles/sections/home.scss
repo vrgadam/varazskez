@@ -1,0 +1,14 @@
+section#home {
+	height: calc(100% - 40px);
+	background-image: url("./img/header.jpg");
+    background-size: cover;
+    background-position: center center;
+    padding-top: ($logo-size-large / 2) + ($height-menu-item * 1.5) + 200px;
+    position: relative;
+    .jansen-logo {
+    	margin: 40px;
+    	bottom: 0;
+    	right: 0;
+    	background-image: url("./img/janssen.png");	
+    }
+}

@@ -4,7 +4,7 @@
     var Navigation = require('./base/nav.js');
 
     $(document).ready(function() {
-        Navigation.init('.site-nav');
+        Navigation.init('.main-header');
     });
 
 })();

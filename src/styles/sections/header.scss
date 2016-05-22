@@ -1,19 +1,118 @@
-#home {
-    background-color: blue;
-    height: 300px;
-}
-
-#services {
-    background-color: purple;
-    height: 300px;
-}
-
-#about {
-    background-color: red;
-    height: 300px;
-}
-
-#contact {
-    background-color: orange;
-    height: 300px;
+.main-header {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: transform .2s ease;
+    height: ($logo-size-large / 3) + ($height-menu-item * 1.5);
+    transform: translateY(0px);
+    background-color: rgba(0, 0, 0, 0.05);
+    @include header-gradient-1;
+    .logo-container {
+        transform: translateY(-$logo-size-large/2);
+        position: relative;
+        z-index: 1;
+    }
+    .varazskez-logo {
+        width: $logo-size-large;
+        height: $logo-size-large;
+        background: url("./img/logo.png") no-repeat center center;
+        background-size: 100%;
+        animation: rotate 150s linear infinite;
+        position: relative;
+        z-index: 1;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .site-nav {
+        text-align: center;
+        transition: all .2s ease;
+        border-top: 1px solid rgba($color-divide, .4);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        .site-nav-inner {
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+            li {
+                display: inline-block;
+                transition: all .2s ease;
+                width: 20%;
+                a {
+                    @include txt-heading($color-text);
+                    text-decoration: none;
+                    margin: 0 15px;
+                    cursor: pointer;
+                    height: $height-menu-item;
+                    line-height: $height-menu-item;
+                    display: inline-block;
+                    padding: 0 10px;
+                    position: relative;
+                    font-weight: 500;
+                    cursor: pointer;
+                    z-index: 2;
+                    color: $color-light;
+                    &.active {
+                        cursor: default;
+                    }
+                    &:after {
+                        content: "";
+                        display: inline-block;
+                        border-top: 4px solid transparent;
+                        border-bottom: 4px solid $color-texas-rose;
+                        border-radius: 5px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        margin-left: -50%;
+                        width: 100%;
+                        transition: all .2s ease;
+                        transform: scale(0, 1);
+                    }
+                    &:hover,
+                    &.active {
+                        &:after {
+                            transform: scale(1, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.docked {
+        position: fixed;
+        animation: slideInDown .3s ease;
+        transform: $transform-header-docked;
+        .logo-container {
+            transform: translateY(($logo-size-large / 3) + ($height-menu-item / 2));
+        }
+        .varazskez-logo {
+            transition: none;
+            animation: none;
+            width: $logo-size-small;
+            height: $logo-size-small;
+        }
+        .site-nav {
+            ul {
+                li {
+                    &:nth-child(2) {
+                        transform: translate3d(-40px, 0, 0);
+                    }
+                    &:nth-child(3) {
+                        transform: translate3d(40px, 0, 0);
+                    }
+                    a {}
+                }
+            }
+        }
+    }
 }

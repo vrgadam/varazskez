@@ -1,8 +1,8 @@
 {
 	"header": {
 		"nav": {
-			"home": "Heti akció",
-			"services": "Szolgáltatások",
+			"home": "Kezdőlap",
+			"services": "Kezelések",
 			"prices": "Árak",
 			"about": "Rólunk",
 			"contact": "Kapcsolat"
@@ -10,6 +10,6 @@
 	},
 	"home": { 
 		"cta": "Kérjen időpontot!",
-		"caption": "Szeretne pónilovakat és sok csokoládét?"
+		"caption": "Holisztikus kozmetikai kezelések"
 	}
 }

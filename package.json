@@ -30,5 +30,10 @@
     "load-grunt-tasks": "^3.3.0",
     "normalize-scss": "^4.0.3",
     "responsive-nav": "^1.0.39"
+  },
+  "dependencies": {
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-express": "^1.4.1"
   }
 }

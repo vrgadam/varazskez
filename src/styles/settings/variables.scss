@@ -1,0 +1,27 @@
+// COLORS
+$color-light: white;
+$color-text: #21201E;
+$color-divide: #ccc;
+$color-texas-rose: #FFBC50;
+$color-turkish-rose: #AC6C82;
+$color-smoky-purple: #594F79;
+
+
+// FONT
+$font-family-heading: 'Raleway', sans-serif;
+$font-size-heading: 12px;
+$font-weight-heading: 500;
+$letter-spacing-heading: 3.5px;
+$text-transform-heading: uppercase;
+
+$font-family-normal: sans-serif;
+$font-size-normal: 12px;
+$font-weight-normal: normal;
+$letter-spacing-normal: 0.5px;
+
+// HEADER
+$logo-size-large: 300px;
+$logo-size-small: $logo-size-large / 3;
+$height-menu-item: 50px;
+$transform-header-docked: translateY(-(($logo-size-large / 3) + ($height-menu-item / 2)));
+$opacity-background-header: .6;

@@ -1,0 +1,55 @@
+@mixin txt-heading($color) {
+    font-family: $font-family-heading;
+    font-size: $font-size-heading;
+    font-weight: $font-weight-heading;
+    letter-spacing: $letter-spacing-heading;
+    text-transform: $text-transform-heading;
+    color: $color;
+}
+
+@mixin txt-normal($color) {
+	font-family: $font-family-normal;
+    font-size: $font-size-normal;
+    font-weight: $font-weight-normal;
+    letter-spacing: $letter-spacing-normal;
+    color: $color;
+}
+
+
+
+@mixin header-gradient-1() {
+    background: rgba($color-smoky-purple, 50%);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, rgba($color-smoky-purple, $opacity-background-header), rgba(white, $opacity-background-header));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, rgba($color-smoky-purple, $opacity-background-header), rgba(white, $opacity-background-header));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
+
+
+@mixin header-gradient-2() {
+    background: #DAE2F8; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #DAE2F8 , #D6A4A4); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #DAE2F8 , #D6A4A4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+@mixin header-gradient-3() {
+    
+
+
+
+
+background: #FFEEEE; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #FFEEEE , #DDEFBB); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #FFEEEE , #DDEFBB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                
+}
+
+
+@mixin header-gradient-4() {
+}
+        
