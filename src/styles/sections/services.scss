@@ -1,0 +1,83 @@
+section#services {
+    .services {
+        .row {
+            margin-bottom: $toast-gutter-width;
+        }
+        .service {
+            position: relative;
+            overflow: hidden;
+            img {
+                width: 100%;
+                position: relative;
+                display: block;
+                min-height: 100%;
+                max-width: 100%;
+                opacity: 0.8;
+                transition: all .4s ease;
+                transform: translateX(3px) scale(1);
+                transform-origin: left center;
+            }
+            .desc {
+                position: absolute;
+                top: 0;
+                left: $toast-gutter-width;
+                width: calc(100% - #{$toast-gutter-width});
+                height: 100%;
+                padding: $toast-gutter-width;
+                background-color: rgba($desc-main-color, 0);
+                border: 3px solid rgba($desc-main-color, .7);
+                &,
+                * {
+                    transition: all .4s ease;
+                    cursor: default;
+                }
+                h3 {
+                    text-align: left;
+                    @include txt-heading($desc-main-color);
+                    margin: 0;
+                    transform: translateY(10px);
+                    &:after {
+                        margin: 10px 0;
+
+                        content: "";
+                        display: block;
+                        height: 3px;
+                        background-color: white;
+                        transform: translateY(20px);
+                        opacity: 0;
+                        transition: all .4s ease;
+                    }
+                }
+                p {
+                    opacity: 0;
+                    transform: translateY(30px);
+                    color: white;
+                    font-size: 110%;
+
+                }
+            }
+            &:hover {
+                img {
+                    transform: translateX(3px) scale(1.05);
+                }
+                .desc {
+                    background-color: rgba($desc-main-color, .7);
+                    h3 {
+                        color: white;
+                        transform: translateY(0px);
+                        &:after {
+                            opacity: 1;
+                            transform: translateY(0px);
+                            transition-delay: .1s;
+                        }
+                    }
+                    p {
+                        transform: translateY(0px);
+                        opacity: 1;
+                        transition-delay: .2s;
+                    }
+                }
+            }
+        }
+    }
+}

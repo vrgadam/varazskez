@@ -1,5 +1,15 @@
-@charset "utf-8";
-
-@import 'tools/tools-imports';
-@import 'base/base-imports';
-@import 'sections/sections-imports';
+@charset 'utf-8';
+// settings
+@import 'settings/variables';
+// tools
+@import 'tools/fonts';
+@import 'tools/normalize';
+@import 'tools/toast_grid';
+@import 'tools/animations';
+@import 'tools/mixins';
+// base
+@import 'base/general';
+// sections
+@import 'sections/header';
+@import 'sections/home';
+@import 'sections/services';

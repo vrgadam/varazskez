@@ -27,9 +27,6 @@ layouts_dir:  ./src/layouts
 
 data_dir:     ./config
 
-sass:
-  sass_dir: ./src/styles
-
 exclude: ['src', 'config', 'node_modules', 'package.json', 'Gruntfile.js', 'README.md']
 
-keep_files: ['dist/assets/varazskez.js']
+keep_files: ['dist/assets/varazskez.js', 'dist/assets/varazskez.css']

@@ -1,0 +1,36 @@
+html,
+body {
+    background-color: $color-light;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+}
+
+section {
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+    .section-inner {
+        max-width: 1024px;
+        margin: 0 auto;
+        height: 100%;
+        padding: 50px 20px;
+    }
+}
+
+span,
+div,
+section,
+p {
+    box-sizing: border-box;
+}
+
+.heading {
+    h2 {
+        text-align: center;
+        @include txt-heading($color-smoky-purple);
+    }
+    margin-bottom: 50px;
+}

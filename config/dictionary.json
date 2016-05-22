@@ -1,11 +1,15 @@
 {
 	"header": {
 		"nav": {
-			"home": "Heti akció",
-			"services": "Szolgáltatások",
+			"home": "Kezdőlap",
+			"services": "Kezelések",
 			"prices": "Árak",
 			"about": "Rólunk",
 			"contact": "Kapcsolat"
 		}
+	},
+	"home": { 
+		"cta": "Kérjen időpontot",
+		"caption": "Holisztikus kozmetikai kezelések"
 	}
 }
