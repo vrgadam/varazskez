@@ -5,6 +5,8 @@
 
     $(document).ready(function() {
         Navigation.init('.main-header');
+
+        $('.row').addClass('hidden');
     });
 
 })();

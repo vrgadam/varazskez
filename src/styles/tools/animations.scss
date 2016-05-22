@@ -41,3 +41,16 @@
     opacity: 1;
   }
 }
+
+
+@keyframes enter-service {
+  from {
+    transform:  translateX(70px);
+    opacity: 0;
+  }
+
+  to {
+    transform:  translateY(0);
+    opacity: 1;
+  }
+}
