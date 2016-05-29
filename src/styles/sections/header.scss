@@ -7,12 +7,9 @@
     background-color: transparent;
     transition: transform .2s ease;
     height: $height-header;
-    transform: translateY(0px);
-    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(20px);
     z-index: 10;
-    @include header-gradient-1;
     .logo-container {
-        transform: translateY(-$logo-size-large/2);
         position: relative;
         z-index: 1;
     }
@@ -28,11 +25,11 @@
         position: absolute;
         left: 0;
         right: 0;
+        display: none;
     }
     .site-nav {
         text-align: center;
         transition: all .2s ease;
-        border-top: 1px solid rgba(179, 179, 179, 0.33);
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -61,16 +58,13 @@
                     position: relative;
                     cursor: pointer;
                     z-index: 2;
-                    text-shadow: 0 0 1px rgba(#333, .5);
                     &.active {
                         cursor: default;
                     }
                     &:after {
                         content: "";
                         display: inline-block;
-                        border-top: 4px solid transparent;
-                        border-bottom: 4px solid $color-texas-rose;
-                        border-radius: 5px;
+                        border-bottom: 2px solid rgba(white, .5);
                         position: absolute;
                         bottom: 0;
                         left: 50%;
@@ -92,11 +86,13 @@
     &.docked {
         position: fixed;
         animation: slideInDown .3s ease;
-        transform: $transform-header-docked;
+        transform: translateY(0px);
+        // @include header-gradient-1;
+        background-color: rgba(white, .7);
         .logo-container {
-            transform: translateY(($logo-size-large / 3) + ($height-menu-item / 2));
         }
         .varazskez-logo {
+            display: block;
             transition: none;
             animation: none;
             width: $logo-size-small;
@@ -111,7 +107,9 @@
                     &:nth-child(3) {
                         transform: translate3d(40px, 0, 0);
                     }
-                    a {}
+                    a {
+                        color: $color-martinique;
+                    }
                 }
             }
         }

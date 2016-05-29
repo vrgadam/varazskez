@@ -49,11 +49,11 @@ function updatePositions() {
 
 function onScroll() {
   var scroll = $(document).scrollTop();
-  if (!$header.hasClass('docked') && scroll > $header.height()) {
+  if (!$header.hasClass('docked') && scroll > $('#home').outerHeight() / 2) {
     $header.addClass('docked');
   }
 
-  if ($header.hasClass('docked') && scroll === 0) {
+  if ($header.hasClass('docked') && scroll <= $('#home').outerHeight() / 2) {
     $header.removeClass('docked');
   }
   if ($('.row').hasClass('hidden') && scroll >= $('#home').outerHeight() / 2) { 

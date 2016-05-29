@@ -8,6 +8,9 @@ $color-smoky-purple: #594F79;
 $color-martinique: #38315F;
 $color-martinique-orig: #363050;
 
+$color-gradient-from: #c7c7c7;
+$color-gradient-to: $color-smoky-purple; 
+
 $desc-main-color: $color-smoky-purple;
 
 
@@ -15,7 +18,7 @@ $desc-main-color: $color-smoky-purple;
 $font-family-heading: 'Raleway', sans-serif;
 $font-size-heading: 120%;
 $font-weight-heading: 700;
-$letter-spacing-heading: 4px;
+$letter-spacing-heading: 2px;
 $text-transform-heading: uppercase;
 
 $font-family-normal: sans-serif;
@@ -24,9 +27,10 @@ $font-weight-normal: normal;
 $letter-spacing-normal: 0.5px;
 
 // HEADER
-$logo-size-large: 300px;
-$logo-size-small: $logo-size-large / 3;
-$height-menu-item: 50px;
-$height-header: ($logo-size-large / 3) + ($height-menu-item * 1.5);
+$logo-size-large: 200px;
+
+$height-menu-item: 40px;
+$logo-size-small: $height-menu-item * 2;
+$height-header: $height-menu-item;
 $transform-header-docked: translateY(-(($logo-size-large / 3) + ($height-menu-item / 2)));
-$opacity-background-header: .7;
+$opacity-background-header: .8;
